@@ -1,13 +1,13 @@
 import {Component, View} from 'angular2/angular2';
 
 @Component({
-  selector: 'block-content'
+  selector: 'block-home'
 })
 @View({
-  templateUrl: 'templates/content.html'
+  templateUrl: './templates/content/home.html'
 })
 
-export class ContentBlock {
+export class HomeBlock {
   constructor(){
     console.info('Loaded the content component');
   }

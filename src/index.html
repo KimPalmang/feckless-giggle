@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>ng-2-sandbox</title>
+    <base href="/" />
   </head>
   <body class="uk-height-1-1">
 
     <main class="uk-height-1-1">Loading...</main>
+    
 
-    <block-navigation></block-navigation>
+
     <script src="lib/traceur-runtime.js"></script>
     <script src="lib/system-csp-production.src.js"></script>
     <script src="lib/Reflect.js"></script>
@@ -19,13 +21,7 @@
     <script>
       System.config({
         defaultJSExtensions: true,
-        baseURL: '/',
-        // globalEvaluationScope: false,
-        // meta: {
-        //   '*': {
-        //     format: 'es6'
-        //   }
-        // }
+        baseURL: '/'
       });
     </script>
 

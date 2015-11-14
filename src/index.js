@@ -1,29 +1,28 @@
-import {Component, View, bootstrap, Provider} from 'angular2/angular2';
-import {RouteConfig, ROUTER_DIRECTIVES, APP_BASE_HREF, ROUTER_BINDINGS, ROUTER_PROVIDERS,
-        LocationStrategy, HashLocationStrategy, RouterLink} from 'angular2/angular2';
+import {Component, View, bootstrap, provide} from 'angular2/angular2';
+import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouteConfig, PathLocationStrategy, HashLocationStrategy} from 'angular2/router';
 
-//Load pages
-import {AboutBlock} from './components/about/about';
+//Pages
+import {HomeBlock} from './components/content/home';
+import {AboutBlock} from './components/content/about';
 
-//Load the components to render the basic view
-import {HeaderBlock} from 'components/block-header';
-import {NavigationBlock} from 'components/block-navigation';
-import {ContentBlock} from 'components/block-content';
-import {FooterBlock} from 'components/block-footer';
+//Load the main components to render the basic view
+import {HeaderBlock} from './components/block-header';
+import {NavigationBlock} from './components/block-navigation';
+import {FooterBlock} from './components/block-footer';
 
 @Component({
-  selector: 'main',
-  directives: [ROUTER_DIRECTIVES]
+  selector: 'main'
 })
 
 @View({
-  directives: [HeaderBlock, NavigationBlock, ContentBlock, FooterBlock],
+  directives: [ROUTER_DIRECTIVES, HeaderBlock, NavigationBlock, HomeBlock, AboutBlock, FooterBlock],
   templateUrl: 'templates/main.html'
 })
 
 @RouteConfig([
-    {path: '/', component: Main, as: '/'},
-    {path: '/about', component: AboutBlock, as: 'about' }
+  { path: "/", redirectTo: "/" },
+  { path: "/", component: HomeBlock, as: "Home" },
+  { path: '/about', component: AboutBlock, as: 'About' }
 ])
 
 class Main {
@@ -31,5 +30,11 @@ class Main {
     console.info('Loaded the main component');
   }
 }
-//bootstrap(Main);
-bootstrap(Main, [ROUTER_BINDINGS, ROUTER_PROVIDERS, Provider(LocationStrategy, {useClass: HashLocationStrategy})]);
+
+bootstrap(Main, [
+  ROUTER_PROVIDERS,
+  provide(PathLocationStrategy, { useClass: HashLocationStrategy })
+]).then(
+    success => console.log('App Bootstrapped!'),
+    error => console.log(error)
+);

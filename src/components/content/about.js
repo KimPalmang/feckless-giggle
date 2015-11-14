@@ -4,6 +4,6 @@ import {Component, View} from 'angular2/angular2';
   selector: 'block-about'
 })
 @View({
-  templateUrl: './templates/about.html'
+  templateUrl: './templates/content/about.html'
 })
 export class AboutBlock {}
