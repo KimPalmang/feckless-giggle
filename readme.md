@@ -9,5 +9,5 @@ Now im just happy it works! :)
 4. Run gulp dev (Loads the app in the browser)
 
 Note: if you run gulp clean the build catalog resets to empty!
-Clean, build, dev
-repeat! :)
+
+###clean, build, dev --repeat! :)
