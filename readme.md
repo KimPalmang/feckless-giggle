@@ -8,4 +8,6 @@ Now im just happy it works! :)
 3. Run gulp build (builds the environment in a folder called build)
 4. Run gulp dev (Loads the app in the browser)
 
-Note: if you run gulp clean the build catalog resets to empty, clean, build, dev repeat! :)
+Note: if you run gulp clean the build catalog resets to empty!
+Clean, build, dev
+repeat! :)
