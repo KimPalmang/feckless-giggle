@@ -7,9 +7,8 @@ import {Component, View, bootstrap} from 'angular2/angular2';
   templateUrl: 'templates/footer.html'
 })
 
-class FooterBlock {
+export class FooterBlock {
   constructor(){
     console.info('Loaded the footer component');
   }
 }
-bootstrap(FooterBlock);

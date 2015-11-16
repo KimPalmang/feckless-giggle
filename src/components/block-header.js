@@ -7,9 +7,8 @@ import {Component, View, bootstrap} from 'angular2/angular2';
   templateUrl: 'templates/header.html'
 })
 
-class HeaderBlock {
+export class HeaderBlock {
   constructor(){
     console.info('Loaded the header component');
   }
 }
-bootstrap(HeaderBlock);

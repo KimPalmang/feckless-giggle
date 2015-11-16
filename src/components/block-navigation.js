@@ -16,21 +16,21 @@ import {AboutBlock} from './content/about';
   templateUrl: 'templates/navigation.html'
 })
 
-@RouteConfig([
-  { path: "/", redirectTo: "/" },
-  { path: "/", component: HomeBlock, as: "Home" },
-  { path: '/about', component: AboutBlock, as: 'About' }
-])
+// @RouteConfig([
+//   { path: "/", redirectTo: "/" },
+//   { path: "/", component: HomeBlock, as: "Home" },
+//   { path: '/about', component: AboutBlock, as: 'About' }
+// ])
 
-class NavigationBlock {
+export class NavigationBlock {
   constructor(){
     console.info('Loaded the navigation component');
   }
 }
-bootstrap(NavigationBlock, [
-  ROUTER_PROVIDERS,
-  provide(PathLocationStrategy, { useClass: HashLocationStrategy })
-]).then(
-    success => console.log('App Bootstrapped!'),
-    error => console.log(error)
-);
+// bootstrap(NavigationBlock, [
+//   ROUTER_PROVIDERS,
+//   provide(PathLocationStrategy, { useClass: HashLocationStrategy })
+// ]).then(
+//     success => console.log('App Bootstrapped!'),
+//     error => console.log(error)
+// );

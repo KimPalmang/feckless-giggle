@@ -85,7 +85,7 @@ gulp.task('build-main-js', function(){
 // move dependencies into build dir
 gulp.task('dependencies', function () {
   return gulp.src([
-    'node_modules/gulp-traceur/node_modules/traceur/bin/traceur-runtime.js',
+    'node_modules/traceur/bin/traceur-runtime.js',
     'node_modules/systemjs/dist/system-csp-production.src.js',
     'node_modules/systemjs/dist/system.js',
     'node_modules/reflect-metadata/Reflect.js',
@@ -98,7 +98,12 @@ gulp.task('dependencies', function () {
 
 gulp.task('build-all-js', ['js', 'build-vendor-js', 'build-main-js', 'dependencies']);
 
-gulp.task('build', ['less', 'html', 'build-all-js']);
+gulp.task('fonts', function(){
+  gulp.src('src/fonts/*')
+  .pipe(gulp.dest('build/fonts'));
+});
+
+gulp.task('build', ['less', 'html', 'fonts', 'build-all-js']);
 
 // clean the build
 gulp.task('clean', function(){
