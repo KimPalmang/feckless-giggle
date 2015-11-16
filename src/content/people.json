@@ -1,0 +1,9 @@
+"persons": [
+  {
+    "name": "Kim Palmäng",
+    "about": "Lots of text about something"
+  },{
+    "name": "Lisa Andersson",
+    "about": "Lots of text about something"
+  }
+]

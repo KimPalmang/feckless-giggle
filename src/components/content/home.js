@@ -7,8 +7,4 @@ import {Component, View} from 'angular2/angular2';
   templateUrl: './templates/content/home.html'
 })
 
-export class HomeBlock {
-  constructor(){
-    console.info('Loaded the content component');
-  }
-}
+export class HomeBlock {}

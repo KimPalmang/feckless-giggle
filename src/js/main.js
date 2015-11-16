@@ -1,3 +1,3 @@
 (function(){
-  console.info('loaded main js file');
+  //content or something
 })();
