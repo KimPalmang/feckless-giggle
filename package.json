@@ -1,10 +1,21 @@
 {
-  "name": "ng-2-sandbox",
+  "name": "feckless-giggle",
+  "description": "Just me trying out angular 2",
   "version": "0.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Kim Palmäng",
+    "email": "kim.palmang@gmail.com",
+    "url": "http://palmang.se/"
+  },
+  "repository": {
+    "type" : "git",
+    "url": "https://github.com/KimPalmang/feckless-giggle"
+  },
   "dependencies": {
     "angular2": "2.0.0-alpha.46",
     "reflect-metadata": "0.1.2",
-    "systemjs": "2.14.3"
+    "systemjs": "0.19.0"
   },
   "devDependencies": {
     "gulp": "3.9.0",
