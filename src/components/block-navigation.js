@@ -1,5 +1,11 @@
-import { Component, View } from 'angular2/angular2';
-import {ROUTER_DIRECTIVES} from 'angular2/router';
+// import { Component, View, bootstrap } from 'angular2/angular2';
+// import {ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component, View, bootstrap, provide} from 'angular2/angular2';
+import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouteConfig, PathLocationStrategy, HashLocationStrategy} from 'angular2/router';
+
+//Pages
+import {HomeBlock} from './content/home';
+import {AboutBlock} from './content/about';
 
 @Component({
   selector: 'block-navigation'
@@ -10,8 +16,21 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
   templateUrl: 'templates/navigation.html'
 })
 
-export class NavigationBlock {
+@RouteConfig([
+  { path: "/", redirectTo: "/" },
+  { path: "/", component: HomeBlock, as: "Home" },
+  { path: '/about', component: AboutBlock, as: 'About' }
+])
+
+class NavigationBlock {
   constructor(){
     console.info('Loaded the navigation component');
   }
 }
+bootstrap(NavigationBlock, [
+  ROUTER_PROVIDERS,
+  provide(PathLocationStrategy, { useClass: HashLocationStrategy })
+]).then(
+    success => console.log('App Bootstrapped!'),
+    error => console.log(error)
+);

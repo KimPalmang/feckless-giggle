@@ -1,4 +1,4 @@
-import {Component, View} from 'angular2/angular2';
+import {Component, View, bootstrap} from 'angular2/angular2';
 
 @Component({
   selector: 'block-header'
@@ -7,8 +7,9 @@ import {Component, View} from 'angular2/angular2';
   templateUrl: 'templates/header.html'
 })
 
-export class HeaderBlock {
+class HeaderBlock {
   constructor(){
     console.info('Loaded the header component');
   }
 }
+bootstrap(HeaderBlock);

@@ -1,6 +1,6 @@
 import {Component, View, bootstrap, provide} from 'angular2/angular2';
-import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouteConfig, PathLocationStrategy, HashLocationStrategy} from 'angular2/router';
-
+ //import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouteConfig, PathLocationStrategy, HashLocationStrategy} from 'angular2/router';
+import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/angular2';
 //Pages
 import {HomeBlock} from './components/content/home';
 import {AboutBlock} from './components/content/about';
@@ -15,15 +15,15 @@ import {FooterBlock} from './components/block-footer';
 })
 
 @View({
-  directives: [ROUTER_DIRECTIVES, HeaderBlock, NavigationBlock, HomeBlock, AboutBlock, FooterBlock],
+  directives: [ROUTER_DIRECTIVES, HomeBlock, AboutBlock],
   templateUrl: 'templates/main.html'
 })
 
-@RouteConfig([
-  { path: "/", redirectTo: "/" },
-  { path: "/", component: HomeBlock, as: "Home" },
-  { path: '/about', component: AboutBlock, as: 'About' }
-])
+// @RouteConfig([
+//   { path: "/", redirectTo: "/" },
+//   { path: "/", component: HomeBlock, as: "Home" },
+//   { path: '/about', component: AboutBlock, as: 'About' }
+// ])
 
 class Main {
   constructor(){
@@ -31,10 +31,4 @@ class Main {
   }
 }
 
-bootstrap(Main, [
-  ROUTER_PROVIDERS,
-  provide(PathLocationStrategy, { useClass: HashLocationStrategy })
-]).then(
-    success => console.log('App Bootstrapped!'),
-    error => console.log(error)
-);
+bootstrap(Main, [ROUTER_PROVIDERS, provide(NavigationBlock, { useClass: NavigationBlock })]);

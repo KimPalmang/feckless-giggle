@@ -6,8 +6,21 @@
 @import "utility/variables.less";
 @import "utility/utility.less";
 
+//base
+@import "base/header.less";
+@import "base/navigation.less";
+@import "base/footer.less";
+
 //partials
-@import "partials/header.less";
-@import "partials/navigation.less";
-@import "partials/content.less";
-@import "partials/footer.less";
+@import "partials/home.less";
+@import "partials/about.less";
+
+.main-wrapper {
+  min-height: :100%
+  height: auto!important;
+  height: 100%;
+  margin: 0 auto -200px;
+  #header, #navigation, #main, #footer {
+    display: block;
+  }
+}
