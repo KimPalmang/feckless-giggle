@@ -1,5 +1,5 @@
 import {Component, View, bootstrap, provide} from 'angular2/angular2';
-import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS, ROUTER_BINDINGS, RouteConfig, PathLocationStrategy, HashLocationStrategy} from 'angular2/router';
+import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouteConfig, PathLocationStrategy, HashLocationStrategy} from 'angular2/router';
 
 //Pages
 import {HomeBlock} from './components/content/home';

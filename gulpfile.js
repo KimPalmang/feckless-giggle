@@ -19,7 +19,8 @@ gulp.task('dev', ['watch', 'serve']);
 gulp.task('serve', function () {
   gulp.src('build')
     .pipe(webserver({
-      open: true
+      open: true,
+      fallback: 'index.html'
     }));
 });
 
