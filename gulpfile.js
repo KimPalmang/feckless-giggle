@@ -86,7 +86,7 @@ gulp.task('build-main-js', function(){
 // move dependencies into build dir
 gulp.task('dependencies', function () {
   return gulp.src([
-    'node_modules/traceur/bin/traceur-runtime.js',
+    'node_modules/gulp-traceur/node_modules/traceur/bin/traceur-runtime.js',
     'node_modules/systemjs/dist/system-csp-production.src.js',
     'node_modules/systemjs/dist/system.js',
     'node_modules/reflect-metadata/Reflect.js',
