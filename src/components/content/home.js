@@ -4,7 +4,7 @@ import {Component, View} from 'angular2/angular2';
   selector: 'block-home'
 })
 @View({
-  templateUrl: './templates/content/home.html'
+  templateUrl: './views/content/home.html'
 })
 
 export class HomeBlock {}

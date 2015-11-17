@@ -7,7 +7,7 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
 
 @View({
   directives: [ROUTER_DIRECTIVES],
-  templateUrl: 'templates/navigation.html'
+  templateUrl: './views/blocks/navigation.html'
 })
 
 export class NavigationBlock {}

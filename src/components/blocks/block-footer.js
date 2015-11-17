@@ -4,7 +4,7 @@ import {Component, View} from 'angular2/angular2';
   selector: 'block-footer'
 })
 @View({
-  templateUrl: 'templates/footer.html'
+  templateUrl: './views/blocks/footer.html'
 })
 
 export class FooterBlock {}

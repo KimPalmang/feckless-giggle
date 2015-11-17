@@ -4,7 +4,7 @@ import {Component, View} from 'angular2/angular2';
   selector: 'block-header'
 })
 @View({
-  templateUrl: 'templates/header.html'
+  templateUrl: './views/blocks/header.html'
 })
 
 export class HeaderBlock {

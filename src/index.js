@@ -6,9 +6,9 @@ import {HomeBlock} from './components/content/home';
 import {AboutBlock} from './components/content/about';
 
 //Load the main components to render the basic view
-import {HeaderBlock} from './components/block-header';
-import {NavigationBlock} from './components/block-navigation';
-import {FooterBlock} from './components/block-footer';
+import {HeaderBlock} from './components/blocks/block-header';
+import {NavigationBlock} from './components/blocks/block-navigation';
+import {FooterBlock} from './components/blocks/block-footer';
 
 @Component({
   selector: 'main'
@@ -22,7 +22,7 @@ import {FooterBlock} from './components/block-footer';
     HomeBlock, AboutBlock, //CONTENT
     FooterBlock
   ],
-  templateUrl: 'templates/main.html'
+  templateUrl: 'views/main.html'
 })
 
 @RouteConfig([
