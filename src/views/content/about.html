@@ -6,3 +6,18 @@
     </div>
   </div>
 </div>
+
+<ul *ng-for="#result of service.result">
+  <li>
+    {{result.name}}
+  </li>
+  <li>
+    {{result.about}}
+  </li>
+  <li>
+    {{result.site}}
+  </li>
+  <li>
+    {{result.text}}
+  </li>
+</ul>

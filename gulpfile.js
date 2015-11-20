@@ -92,6 +92,7 @@ gulp.task('dependencies', function () {
     'node_modules/reflect-metadata/Reflect.js',
     'node_modules/angular2/bundles/angular2.js',
     'node_modules/angular2/bundles/router.js',
+    'node_modules/angular2/bundles/http.js',
     'src/js/vendor/jquery.js'
   ])
     .pipe(gulp.dest('build/lib'));
@@ -104,7 +105,12 @@ gulp.task('fonts', function(){
   .pipe(gulp.dest('build/fonts'));
 });
 
-gulp.task('build', ['less', 'html', 'fonts', 'build-all-js']);
+gulp.task('content', function(){
+  gulp.src('src/content/*.json')
+  .pipe(gulp.dest('build/content'));
+});
+
+gulp.task('build', ['less', 'html', 'fonts', 'build-all-js', 'content']);
 
 // clean the build
 gulp.task('clean', function(){
