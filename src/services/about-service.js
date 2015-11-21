@@ -8,12 +8,8 @@ export class AboutService {
 
   constructor(http: Http) {
     http.get('./content/about.json').subscribe(res => {
-      this.result = res.json()
+      this.result = res.json();
     });
   }
-
-  getData(): any {
-    return this.result;
-  };
 
 }

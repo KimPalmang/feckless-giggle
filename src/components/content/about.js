@@ -14,7 +14,6 @@ import {Http, HTTP_PROVIDERS} from 'angular2/http';
 
 export class AboutBlock {
   service: AboutService;
-  about: Array<any> = [];
 
   constructor(service: AboutService){
     this.service = service;

@@ -1,7 +1,10 @@
-
-  [{
-    "name": "Kim Palmäng",
-    "about": "Lots of text about something",
-    "site": "palmang.se",
-    "text": "Cats kdk dkdkd kdk dkdk dkdkd kdkd kdkd"
+[{
+  "title": "About this site",
+  "about": "Cat ipsum dolor sit amet, hide from vacuum cleaner tuxedo cats always looking dapper. Sit by the fire bathe private parts with tongue then lick owner's face but all of a sudden cat goes crazy. Asdflkjaertvlkjasntvkjn (sits on keyboard) kitty power! . Where is my slave? I'm getting hungry hide from vacuum cleaner, or eat grass, throw it back up but wake up human for food at 4am or make muffins. Behind the couch kitty power! . Love to play with owner's hair tie lick arm hair stare at wall turn and meow stare at wall some more meow again continue staring intrigued by the shower. Climb a tree, wait for a fireman jump to fireman then scratch his face.",
+  "contact": [{
+    "title": "Contact",
+    "name": "Jane Doe",
+    "email": "jane.doe@example.com",
+    "url": "janedoe.example.com"
   }]
+}]

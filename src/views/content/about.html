@@ -1,23 +1,17 @@
-<div id="content" class="uk-block">
+<div id="content" class="uk-block" *ng-for="#result of service.result">
   <div class="uk-grid">
     <div class="uk-width-1-1">
-      <h3>This is about me</h3>
-      <p>I have a cat, two spiders and a vaccum cleaner</p>
+      <h3>{{result.title}}</h3>
+      <p>{{result.about}}</p>
+
+      <div *ng-for="#contact of result.contact">
+        <h3>{{contact.title}}</h3>
+        <div class="uk-grid uk-grid-width-medium-1-3">
+          <p>Name: {{contact.name}}</p>
+          <p>Email: {{contact.email}}</p>
+          <p>Url: {{contact.url}}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
-<ul *ng-for="#result of service.result">
-  <li>
-    {{result.name}}
-  </li>
-  <li>
-    {{result.about}}
-  </li>
-  <li>
-    {{result.site}}
-  </li>
-  <li>
-    {{result.text}}
-  </li>
-</ul>
