@@ -4,6 +4,7 @@ import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouteConfig, PathLocationStrategy, 
 //Pages
 import {HomeBlock} from './components/content/home';
 import {AboutBlock} from './components/content/about';
+import {ImageBlock} from './components/content/images';
 
 //Load the main components to render the basic view
 import {HeaderBlock} from './components/blocks/block-header';
@@ -12,7 +13,7 @@ import {FooterBlock} from './components/blocks/block-footer';
 
 @Component({
   selector: 'main',
-  viewProviders: [HomeBlock, AboutBlock]
+  viewProviders: [HomeBlock, AboutBlock, ImageBlock]
 })
 
 @View({
@@ -28,7 +29,8 @@ import {FooterBlock} from './components/blocks/block-footer';
 @RouteConfig([
   { path: "/", redirectTo: "/" },
   { path: "/", component: HomeBlock, as: "Home" },
-  { path: '/about', component: AboutBlock, as: 'About' }
+  { path: '/about', component: AboutBlock, as: 'About' },
+  { path: '/images', component: ImageBlock, as: 'Images' }
 ])
 
 class Main {

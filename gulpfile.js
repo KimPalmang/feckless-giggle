@@ -20,6 +20,9 @@ gulp.task('serve', function () {
   gulp.src('build')
     .pipe(webserver({
       open: true,
+      host: 'localhost',
+      port: 8000,
+      path: '/',
       fallback: 'index.html'
     }));
 });
