@@ -23,7 +23,10 @@ gulp.task('serve', function () {
       host: 'localhost',
       port: 8000,
       path: '/',
-      fallback: 'index.html'
+      fallback: 'index.html',
+      // headers: {
+      //   'Access-Control-Allow-Origin': 'http://localhost:8000'
+      // }
     }));
 });
 
@@ -51,7 +54,7 @@ gulp.task('less', function(){
 
 //Javascripts move to build and uglify
 gulp.task('js', function () {
-  return gulp.src(['src/**/*.js', '!src/js/**/*.js'])
+  return gulp.src(['src/**/*.js', '!src/js/**/*.js', '!src/content/*.js'])
     .pipe(rename({
       extname: ''
     }))
@@ -89,7 +92,7 @@ gulp.task('build-main-js', function(){
 // move dependencies into build dir
 gulp.task('dependencies', function () {
   return gulp.src([
-    'node_modules/gulp-traceur/node_modules/traceur/bin/traceur-runtime.js',
+    'node_modules/traceur/bin/traceur-runtime.js',
     'node_modules/systemjs/dist/system-csp-production.src.js',
     'node_modules/systemjs/dist/system.js',
     'node_modules/reflect-metadata/Reflect.js',
@@ -109,7 +112,7 @@ gulp.task('fonts', function(){
 });
 
 gulp.task('content', function(){
-  gulp.src('src/content/*.json')
+  gulp.src(['src/content/*.json', 'src/content/*.js'])
   .pipe(gulp.dest('build/content'));
 });
 
